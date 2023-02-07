@@ -1,0 +1,55 @@
+<template>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col  slds-size_6-of-12">
+
+            <lightning-card title="ACCOUNT">
+                <div style="height: 300px;">
+                    <lightning-datatable key-field="id" data={accList} columns={accountColumns}
+                        onrowaction={handleRowAction}>
+                        
+                    </lightning-datatable>
+                </div>
+
+                <lightning-button label="AGGIUNGI ACCOUNT" variant ="brand" slot="footer" onclick={aggiungiAccount}></lightning-button>
+            </lightning-card>
+        </div>
+
+
+
+        <div class="slds-col  slds-size_6-of-12">
+        <template if:true={ShowSecondPageOpp}>
+        
+
+            <lightning-card title="OPPORTUNITY">
+                <div style="height: 300px;">
+                    <lightning-datatable key-field="idOpp" data={oppList} columns={oppColumns}
+                        onrowaction={handleRowAction}>
+                        <p>CIAO</p>
+                    </lightning-datatable>
+                </div>
+
+                <lightning-button label="AGGIUNGI CONTACT/OPPORTUNITY" variant ="brand" slot="footer"></lightning-button>
+            </lightning-card>
+        
+        
+        </template>
+        
+        <template if:true={ShowSecondPageCont}>
+        
+
+            <lightning-card title="CONTACT">
+                <div style="height: 300px;">
+                    <lightning-datatable key-field="idCon" data={conList} columns={contColumns}
+                        onrowaction={handleRowAction}>
+                        <p>CIAO</p>
+                    </lightning-datatable>
+                </div>
+
+                <lightning-button label="AGGIUNGI CONTACT/OPPORTUNITY" variant ="brand" slot="footer"></lightning-button>
+            </lightning-card>
+        
+        
+        </template>
+    </div>
+    </div>
+</template>
