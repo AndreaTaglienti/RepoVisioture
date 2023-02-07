@@ -162,6 +162,7 @@ export default class DatatableWithRowActions extends LightningElement {
         
         const { id } = row;
         const index = this.findRowIndexById(id);
+        //commento
         if (index !== -1) {
             this.accList = this.accList
                 .slice(0, index)
