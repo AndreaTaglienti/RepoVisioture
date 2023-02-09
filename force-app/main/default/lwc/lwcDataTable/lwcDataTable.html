@@ -1,55 +1,22 @@
 <template>
-    <div class="slds-grid slds-gutters">
-        <div class="slds-col  slds-size_6-of-12">
 
-            <lightning-card title="ACCOUNT">
-                <div style="height: 300px;">
-                    <lightning-datatable key-field="id" data={accList} columns={accountColumns}
-                        onrowaction={handleRowAction}>
-                        
-                    </lightning-datatable>
-                </div>
-
-                <lightning-button label="AGGIUNGI ACCOUNT" variant ="brand" slot="footer" onclick={aggiungiAccount}></lightning-button>
-            </lightning-card>
-        </div>
-
-
-
-        <div class="slds-col  slds-size_6-of-12">
-        <template if:true={ShowSecondPageOpp}>
-        
-
-            <lightning-card title="OPPORTUNITY">
-                <div style="height: 300px;">
-                    <lightning-datatable key-field="idOpp" data={oppList} columns={oppColumns}
-                        onrowaction={handleRowAction}>
-                        <p>CIAO</p>
-                    </lightning-datatable>
-                </div>
-
-                <lightning-button label="AGGIUNGI CONTACT/OPPORTUNITY" variant ="brand" slot="footer"></lightning-button>
-            </lightning-card>
-        
-        
-        </template>
-        
-        <template if:true={ShowSecondPageCont}>
-        
-
-            <lightning-card title="CONTACT">
-                <div style="height: 300px;">
-                    <lightning-datatable key-field="idCon" data={conList} columns={contColumns}
-                        onrowaction={handleRowAction}>
-                        <p>CIAO</p>
-                    </lightning-datatable>
-                </div>
-
-                <lightning-button label="AGGIUNGI CONTACT/OPPORTUNITY" variant ="brand" slot="footer"></lightning-button>
-            </lightning-card>
-        
-        
-        </template>
-    </div>
-    </div>
+    <ul data-aura-rendered-by="7:540;a" class="forceChatterFeedAnchorSubMenu" data-aura-class="forceChatterFeedAnchorSubMenu">
+        <li class="slds-is-active" data-aura-rendered-by="9:540;a">
+            <a data-feedtype="News" data-index="0" href="/lightning/page/chatter/news/me" title="What I Follow" class="slds-navigation-list--vertical__action mlds-navigation-list--vertical__action_compact slds-text-link--reset slds-truncate cuf-feedNavigationLabel" data-aura-rendered-by="10:540;a">
+                What I Follow
+                <span class="assistiveText" data-aura-rendered-by="13:540;a">Selected</span>
+            </a></li>
+            <li class=" cuf-hasUnread" data-aura-rendered-by="15:540;a">
+                <a data-feedtype="To" data-index="1" href="/lightning/page/chatter/to/me" title="To Me" class="slds-navigation-list--vertical__action mlds-navigation-list--vertical__action_compact slds-text-link--reset slds-truncate cuf-feedNavigationLabel" data-aura-rendered-by="16:540;a">To Me<!--render facet: 18:540;a--></a>
+            </li>
+            <li class=" cuf-hasUnread" data-aura-rendered-by="19:540;a">
+                <a data-feedtype="Bookmarks" data-index="2" href="/lightning/page/chatter/bookmarks/me" title="Bookmarked" class="slds-navigation-list--vertical__action mlds-navigation-list--vertical__action_compact slds-text-link--reset slds-truncate cuf-feedNavigationLabel" data-aura-rendered-by="20:540;a">Bookmarked<!--render facet: 22:540;a--></a>
+            </li>
+            <li class=" cuf-hasUnread" data-aura-rendered-by="23:540;a">
+                <a data-feedtype="Company" data-index="3" href="/lightning/page/chatter/company/me" title="Company Highlights" class="slds-navigation-list--vertical__action mlds-navigation-list--vertical__action_compact slds-text-link--reset slds-truncate cuf-feedNavigationLabel" data-aura-rendered-by="24:540;a">Company Highlights<!--render facet: 26:540;a--></a>
+            </li>
+            <li class=" cuf-hasUnread" data-aura-rendered-by="27:540;a">
+                <a data-feedtype="draft" data-index="4" href="/lightning/page/chatter/draft/me" title="My Drafts" class="slds-navigation-list--vertical__action mlds-navigation-list--vertical__action_compact slds-text-link--reset slds-truncate cuf-feedNavigationLabel" data-aura-rendered-by="28:540;a">My Drafts<!--render facet: 30:540;a--></a>
+            </li>
+        </ul>
 </template>
